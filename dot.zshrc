@@ -7,7 +7,7 @@ export LANG=ja_JP.UTF-8
 autoload colors
 colors
 PROMPT="
-[%n@MBA:%{${fg[yellow]}%}%~%{${reset_color}%}]
+[%n@%m:%{${fg[yellow]}%}%~%{${reset_color}%}]
 $ "
 PROMPT2='[%n]> '
 RPROMPT="%1(v|%F{green}%1v%f|)"
