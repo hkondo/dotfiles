@@ -19,6 +19,7 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'Shougo/vinarise'
 " Complement
 NeoBundle 'Shougo/neocomplcache'
 " ruby / rails
