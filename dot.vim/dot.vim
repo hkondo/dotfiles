@@ -1,0 +1,1 @@
+/Users/misaki/git/dotfiles/dot.vim

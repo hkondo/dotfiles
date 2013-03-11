@@ -1,8 +1,5 @@
 # misaki's .zshrc
 
-# LANG
-export LANG=ja_JP.UTF-8
-
 # prompt
 autoload colors
 colors
@@ -44,12 +41,7 @@ setopt noautoremoveslash
 
 # completion configuration
 autoload -U compinit
-compinit
-
-# alias
-setopt complete_aliases # aliased ls needs if file/dir completions work
-alias ls="ls -G"
-alias gls="gls --color"
+compinit -u
 
 # terminal configuration
 unset LSCOLORS
@@ -113,4 +105,3 @@ LANG=en_US.UTF-8 vcs_info
 }
 
 add-zsh-hook precmd _update_vcs_info_msg
-
