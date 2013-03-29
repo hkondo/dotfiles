@@ -2,7 +2,6 @@
 export LANG=ja_JP.UTF-8
 export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/shims:$PATH"
 
 # alias
