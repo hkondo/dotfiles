@@ -1,0 +1,1 @@
+/Users/misaki/Dropbox/Code/git/dotfiles/dot.vim
