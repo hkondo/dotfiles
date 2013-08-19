@@ -16,9 +16,6 @@ precmd() {
   echo -ne "\033]0;${USER}@MBA:${PWD}\007"
 }
 
-# bindkey
-bindkey -v
-
 # history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -105,3 +102,4 @@ LANG=en_US.UTF-8 vcs_info
 }
 
 add-zsh-hook precmd _update_vcs_info_msg
+setopt nonomatch
