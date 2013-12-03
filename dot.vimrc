@@ -21,8 +21,7 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vinarise'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neocomplcache-rsense'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
@@ -33,24 +32,10 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'taichouchou2/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tyru/open-browser.vim'
 
 filetype plugin indent on
 
 NeoBundleCheck
-
-" necomplcache setting
-let g:neocomplcache_enable_at_startup = 1
-
-" quickrun.vim settings
-let g:quickrun_config = {}
-let g:quickrun_config['markdown'] = {
-      \ 'outputter' : 'browser',
-      \ 'command': 'pandoc',
-      \ 'exec': '%c --from=mdarkdown --to=html %o %s %a',
-      \ }
 
 " Encoding Settings 
 set encoding=utf-8
