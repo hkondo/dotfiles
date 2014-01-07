@@ -1,22 +1,24 @@
 " Misaki's .vimrc
 
-" Enable no Vi compatible commands.
-set nocompatible
-
-" Neobundle
-filetype off
-
+" neobundle
 if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set nocompatible  " Enable no Vi compatible commands.
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+
 call neobundle#rc(expand('~/.vim/bundle/'))
 
-NeoBundle 'Shougo/neobundle.vim'
+
+" neobundle.vim
+NeoBundleFetch 'Shougo/neobundle.vim'
+
 NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \   'mac' : 'make -f make_mac.mak',
-      \   'unix' : 'make -f make_unix.mak',
-      \ }}
+  \ 'build' : {
+  \   'mac' : 'make -f make_mac.mak',
+  \   'unix' : 'make -f make_unix.mak',
+  \   },
+  \ }
+
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/unite.vim'
@@ -35,20 +37,21 @@ NeoBundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 
+" Installation check.
 NeoBundleCheck
 
-" Encoding Settings 
+" Basic settings.
+" encoding settings.
 set encoding=utf-8
-set fileencoding=utf-8
 set fencs=utf-8,iso-2022-jp,euc-jp,cp932,ucs-bom,default,latin1
 set ambiwidth=double
 set fileformats=unix,dos,mac
 lang en_US.UTF-8
 
-" Syntax Settings 
+" syntax.setting.
 syntax enable
 
-" Search Settings 
+" search settings.
 set ignorecase
 set smartcase
 set wrapscan
@@ -60,18 +63,16 @@ noremap * *zz
 noremap # #zz
 noremap g* g*zz
 noremap g# g#zz
-" 
 
-" Indent Settings 
+" indent settings.
 set autoindent
 set cindent
 set tabstop=2
 set shiftwidth=2
 set smarttab
-set expandtab
-" 
+set expandtab 
 
-" View Settings 
+" view settings.
 set background=dark
 colorscheme solarized
 set showcmd
@@ -85,10 +86,51 @@ set scrolloff=5
 set formatoptions& formatoptions+=mM
 set tw=0
 set nobackup
-set history=1000
-" 
+set history=1000 
 
-" Folding Settings 
+" folding settings.
 set foldenable
 set foldmethod=marker
 set foldcolumn=1
+
+
+" neocomplete.vim configurations.
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+  \ 'default' : '',
+  \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+  let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>  neocomplete#undo_completion()
+inoremap <expr><C-l>  neocomplete#complete_common_string()
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h>  neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplete#close_popup()
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+
+" vimshell configurations.
+
