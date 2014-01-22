@@ -41,17 +41,17 @@ filetype plugin indent on
 NeoBundleCheck
 
 " Basic settings.
-" encoding settings.
-set encoding=utf-8
+" Encoding settings.
+set enc=utf-8
 set fencs=utf-8,iso-2022-jp,euc-jp,cp932,ucs-bom,default,latin1
 set ambiwidth=double
 set fileformats=unix,dos,mac
 lang en_US.UTF-8
 
-" syntax.setting.
+" Syntax.setting.
 syntax enable
 
-" search settings.
+" Search settings.
 set ignorecase
 set smartcase
 set wrapscan
@@ -64,7 +64,7 @@ noremap # #zz
 noremap g* g*zz
 noremap g# g#zz
 
-" indent settings.
+" Indent settings.
 set autoindent
 set cindent
 set tabstop=2
@@ -72,7 +72,7 @@ set shiftwidth=2
 set smarttab
 set expandtab 
 
-" view settings.
+" View settings.
 set background=dark
 colorscheme solarized
 set showcmd
@@ -88,7 +88,7 @@ set tw=0
 set nobackup
 set history=1000 
 
-" folding settings.
+" Folding settings.
 set foldenable
 set foldmethod=marker
 set foldcolumn=1
@@ -136,3 +136,9 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_prompt =  "$ "
 let g:vimshell_secondary_prompt = "> "
+
+" auto_comment_off
+augroup auto_comment_off
+  autocmd!
+  autocmd BufEnter * setlocal formatoptions-=ro
+augroup END
