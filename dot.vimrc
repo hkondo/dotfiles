@@ -34,6 +34,8 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'taichouchou2/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 
 filetype plugin indent on
 
@@ -142,3 +144,8 @@ augroup auto_comment_off
   autocmd!
   autocmd BufEnter * setlocal formatoptions-=ro
 augroup END
+
+
+" previm configurations.
+" preview markdown <C-l>
+nnoremap <C-l> :PrevimOpen<CR>
