@@ -36,6 +36,7 @@ NeoBundle 'taichouchou2/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'itchyny/lightline.vim'
 
 filetype plugin indent on
 
@@ -149,3 +150,9 @@ augroup END
 " previm configurations.
 " preview markdown <C-l>
 nnoremap <C-l> :PrevimOpen<CR>
+
+
+" lightline configrations.
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
