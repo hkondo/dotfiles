@@ -142,6 +142,13 @@ let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_prompt =  "$ "
 let g:vimshell_secondary_prompt = "> "
 
+
+" vimfiler configurations.
+" vimfiler behaves as default explorer
+" start :e
+let g:vimfiler_as_default_explorer = 1
+
+
 " auto_comment_off
 augroup auto_comment_off
   autocmd!
