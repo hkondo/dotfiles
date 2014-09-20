@@ -25,6 +25,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vinarise'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'rhysd/neco-ruby-keyword-args'
@@ -77,7 +78,8 @@ set expandtab
 
 " View settings.
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme Tomorrow
 set showcmd
 set noruler
 set showmatch
