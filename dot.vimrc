@@ -26,6 +26,8 @@ NeoBundle 'Shougo/vinarise'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'cocopon/lightline-hybrid.vim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'rhysd/neco-ruby-keyword-args'
@@ -77,9 +79,11 @@ set smarttab
 set expandtab 
 
 " View settings.
-set background=dark
+"set background=dark
 "colorscheme solarized
-colorscheme Tomorrow
+"colorscheme Tomorrow
+let g:hybrid_use_iTerm_colors = 1
+colorscheme hybrid
 set showcmd
 set noruler
 set showmatch
@@ -164,6 +168,5 @@ nnoremap <C-l> :PrevimOpen<CR>
 
 
 " lightline configrations.
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ }
+let g:lightline = {}
+let g:lightline.colorscheme = 'hybrid'
