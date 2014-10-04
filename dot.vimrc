@@ -143,7 +143,10 @@ autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 
+" vim-markdown configurations.
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+"" disable folding
+let g:vim_markdown_folding_disabled=1
 
 " vimshell configurations.
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
