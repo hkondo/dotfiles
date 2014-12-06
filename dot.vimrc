@@ -46,6 +46,7 @@ NeoBundle "majutsushi/tagbar"
 
 "" Javascript Bundle
 NeoBundle "scrooloose/syntastic"
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
 call neobundle#end()
 
