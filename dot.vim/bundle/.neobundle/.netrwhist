@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/misaki/Dropbox/git/misakit.github.com/source/_posts'
-let g:netrw_dirhist_2='/Users/misaki/Dropbox/git/misakit.github.com/source/_includes'
-let g:netrw_dirhist_3='/Users/misaki/Dropbox/git/misakit.github.com/source/about'
