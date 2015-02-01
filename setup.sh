@@ -1,6 +1,6 @@
 #!/bin/sh
-
-ln -s `pwd`/dot.vim ~/.vim
-ln -s `pwd`/dot.vimrc ~/.vimrc
-ln -s `pwd`/dot.zshrc ~/.zshrc
-ln -s `pwd`/dot.zshenv ~/.zshenv
+TOP=$(cd $(dirname $0); pwd)
+ln -s ${TOP}/dot.vim ~/.vim
+ln -s ${TOP}/dot.vimrc ~/.vimrc
+ln -s ${TOP}/dot.zshrc ~/.zshrc
+ln -s ${TOP}/dot.zshenv ~/.zshenv
